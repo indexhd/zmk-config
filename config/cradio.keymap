@@ -5,26 +5,23 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    behaviors {
-        ht: hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
-            bindings = <&kp>, <&kp>;
-        };
-    };
-
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
     combos {
         compatible = "zmk,combos";
 
         layer1 {
-            bindings = <&to 1>;
+            bindings = <&to 0>;
             key-positions = <33 0>;
+        };
+    };
+
+    macros {
+        new_macro: new_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "NEW_MACRO";
         };
     };
 
@@ -33,19 +30,19 @@
 
         default {
             bindings = <
-&kp Q  &kp W  &kp F  &kp P      &kp B             &kp J      &kp L    &kp U      &kp Y    &kp BSPC
-&kp A  &kp R  &kp S  &kp T      &kp G             &kp M      &kp N    &kp E      &kp I    &kp O
-&kp Z  &kp X  &kp C  &kp D      &kp V             &kp K      &kp H    &kp COMMA  &kp DOT  &kp ENTER
-                     &kp SPACE  &kp LEFT_SHIFT    &kp LCTRL  &kp ESC
+&kp Q  &kp W  &kp F  &kp P      &kp B             &kp J      &kp L  &kp U      &kp Y    &kp BSPC
+&kp A  &kp R  &kp S  &kp T      &kp G             &kp M      &kp N  &kp E      &kp I    &kp O
+&kp Z  &kp X  &kp C  &kp D      &kp V             &kp K      &kp H  &kp COMMA  &kp DOT  &kp ENTER
+                     &kp SPACE  &kp LEFT_SHIFT    &kp LCTRL  &sl 1
             >;
         };
 
         layer_1 {
             bindings = <
-&kp F1   &kp F2  &kp F3  &kp F4     &kp F5       &kp F6  &kp F7     &kp F8  &kp F9  &kp F10
-&kp N1   &kp N2  &kp N3  &kp N4     &kp N5       &kp N6  &kp N7     &kp N8  &kp N9  &kp N0
-&kp F11  &trans  &trans  &trans     &trans       &trans  &trans     &trans  &trans  &kp F12
-                         &kp SPACE  &kp LSHFT    &trans  &kp LCTRL
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &to 0
             >;
         };
     };
