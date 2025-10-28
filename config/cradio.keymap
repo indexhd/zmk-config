@@ -19,24 +19,33 @@
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
+    combos {
+        compatible = "zmk,combos";
+
+        layer1 {
+            bindings = <&to 1>;
+            key-positions = <33 0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default {
             bindings = <
-&kp Q  &kp W  &kp F  &kp P      &kp B        &kp J      &kp L     &kp U      &kp Y    &kp BSPC
-&kp A  &kp R  &kp S  &kp T      &kp G        &kp M      &kp N     &kp E      &kp I    &kp O
-&kp Z  &kp X  &kp C  &kp D      &kp V        &kp K      &kp H     &kp COMMA  &kp DOT  &kp ENTER
-                     &kp RSHFT  &kp SPACE    &kp LCTRL  &kp RALT
+&kp Q  &kp W  &kp F  &kp P      &kp B             &kp J      &kp L    &kp U      &kp Y    &kp BSPC
+&kp A  &kp R  &kp S  &kp T      &kp G             &kp M      &kp N    &kp E      &kp I    &kp O
+&kp Z  &kp X  &kp C  &kp D      &kp V             &kp K      &kp H    &kp COMMA  &kp DOT  &kp ENTER
+                     &kp SPACE  &kp LEFT_SHIFT    &kp LCTRL  &kp ESC
             >;
         };
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans  &trans
+&kp F1   &kp F2  &kp F3  &kp F4     &kp F5       &kp F6  &kp F7     &kp F8  &kp F9  &kp F10
+&kp N1   &kp N2  &kp N3  &kp N4     &kp N5       &kp N6  &kp N7     &kp N8  &kp N9  &kp N0
+&kp F11  &trans  &trans  &trans     &trans       &trans  &trans     &trans  &trans  &kp F12
+                         &kp SPACE  &kp LSHFT    &trans  &kp LCTRL
             >;
         };
     };
