@@ -19,5 +19,25 @@
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
-    keymap { compatible = "zmk,keymap"; };
+    keymap {
+        compatible = "zmk,keymap";
+
+        default {
+            bindings = <
+&kp Q  &kp W  &kp F  &kp P      &kp B        &kp J      &kp L     &kp U      &kp Y    &kp BSPC
+&kp A  &kp R  &kp S  &kp T      &kp G        &kp M      &kp N     &kp E      &kp I    &kp O
+&kp Z  &kp X  &kp C  &kp D      &kp V        &kp K      &kp H     &kp COMMA  &kp DOT  &kp ENTER
+                     &kp RSHFT  &kp SPACE    &kp LCTRL  &kp RALT
+            >;
+        };
+
+        layer_1 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
+            >;
+        };
+    };
 };
