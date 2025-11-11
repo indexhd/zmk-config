@@ -26,11 +26,11 @@
 &kp Q           &kp W             &kp F           &kp P        &kp B             &kp J      &kp L        &kp U            &kp Y              &kp BSPC
 &mt A LEFT_WIN  &mt R LEFT_SHIFT  &mt S LEFT_ALT  &mt T LCTRL  &kp G             &kp M      &mt N RCTRL  &mt E RIGHT_ALT  &mt I RIGHT_SHIFT  &mt O RIGHT_WIN
 &kp Z           &kp X             &kp C           &kp D        &kp V             &kp K      &kp H        &kp COMMA        &kp DOT            &kp ENTER
-                                                  &kp SPACE    &kp LEFT_SHIFT    &kp LCTRL  &sl 1
+                                                  &lt 2 A      &kp LEFT_SHIFT    &kp SPACE  &sl 1
             >;
         };
 
-        layer_1 {
+        symbol {
             bindings = <
 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
@@ -39,12 +39,12 @@
             >;
         };
 
-        layer_2 {
+        navigation {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans              &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &kp LS(LEFT_BRACE)  &trans  &trans  &trans  &trans
-&kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6              &kp N7  &kp N8  &kp N9  &kp N0
-                        &trans  &trans    &trans              &trans
+&kp SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ASTERISK    &trans          &trans          &trans        &trans     &trans
+&kp N0     &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS       &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
+&kp COMMA  &kp N7        &kp NUMBER_8  &kp N9        &kp PLUS        &kp N6          &kp N7          &kp N8        &kp N9     &kp N0
+                                       &trans        &trans          &trans          &trans
             >;
         };
     };
