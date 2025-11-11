@@ -35,9 +35,9 @@
 
         default {
             bindings = <
-&kp Q           &kp W             &kp F           &kp P        &kp B             &kp J      &kp L        &kp U            &kp Y              &kp BSPC
-&mt A LEFT_WIN  &mt R LEFT_SHIFT  &mt S LEFT_ALT  &mt T LCTRL  &kp G             &kp M      &mt N RCTRL  &mt E RIGHT_ALT  &mt I RIGHT_SHIFT  &mt O RIGHT_WIN
-&kp Z           &kp X             &kp C           &kp D        &kp V             &kp K      &kp H        &kp COMMA        &kp DOT            &kp ENTER
+&kp Q           &kp W             &kp F           &kp P        &kp B             &kp N      &kp I        &kp U            &kp Y              &kp BSPC
+&mt A LEFT_WIN  &mt R LEFT_SHIFT  &mt S LEFT_ALT  &mt T LCTRL  &kp G             &kp H      &mt J RCTRL  &mt K RIGHT_ALT  &mt L RIGHT_SHIFT  &mt O RIGHT_WIN
+&kp Z           &kp X             &kp C           &kp D        &kp V             &kp E      &kp M        &kp COMMA        &kp DOT            &kp ENTER
                                                   &lt 2 A      &kp LEFT_SHIFT    &kp SPACE  &sl 1
             >;
         };
