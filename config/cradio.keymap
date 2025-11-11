@@ -7,7 +7,14 @@
 / {
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <31 32>;
+        };
+    };
 
     macros {
         new_macro: new_macro {
